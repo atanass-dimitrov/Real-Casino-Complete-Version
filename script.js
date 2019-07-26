@@ -1,40 +1,87 @@
-// DECLARATIONS
+/**
+ * This is where the declarations are located
+ */
+
 const co = document.querySelector('.co');
 const claim = document.querySelector('.claim');
 const header = document.querySelector('header');
-// HOME
+
+/**
+ * For the Home DOM
+ */
+
 const casinoHome = document.querySelector('.casinoHome');
 const hiddenHome = document.querySelector('.hiddenHome');
-// OFFERS
+
+/**
+ * For the offer DOM
+ */
+
 const offer = document.querySelector('.offer');
 const offer1 = document.querySelector('.offer1');
 const offer2 = document.querySelector('.offer2');
 const offer3 = document.querySelector('.offer3');
-// SUBOFFERS
+
+/**
+ * For the subOffer DOM
+ */
+
 const subOffer1 = document.querySelector('.subOffer1');
 const subOffer2 = document.querySelector('.subOffer2');
 const subOffer3 = document.querySelector('.subOffer3');
-// REVEAL BUTTON
+
+/**
+ * For the revealBtn DOM
+ */
+
 const revealBtn1 = document.querySelector('.revealBtn1');
 const revealBtn2 = document.querySelector('.revealBtn2');
 const revealBtn3 = document.querySelector('.revealBtn3');
-// CARD CLAIM BUTTON
+
+/**
+ * For the cardClaim DOM
+ */
+
 const cardClaim = document.querySelector('.cardClaim');
 const cardClaim2 = document.querySelector('.cardClaim2');
 const cardClaim3 = document.querySelector('.cardClaim3');
-// DOLLAR IMAGES
+
+/**
+ * For the dollarIMG DOM
+ */
+
 const dollarIMG = document.querySelector('.dollarIMG');
 const dollarIMG2 = document.querySelector('.dollarIMG2');
 const dollarIMG3 = document.querySelector('.dollarIMG3');
-// OFFER IMAGES
+
+/**
+ * For the offerIMG DOM
+ */
+
 const offerIMG = document.querySelector('.offerIMG');
 const offerIMG2 = document.querySelector('.offerIMG2');
 const offerIMG3 = document.querySelector('.offerIMG3');
-// MODAL
+
+/**
+ * For the modal DOM
+ */
+
 let modal = document.getElementById("myModal");
 let modal2 = document.getElementById("myModal2");
 let modal3 = document.getElementById("myModal3");
-// LEAD FORM
+
+/**
+ * For the rewards DOM
+ */
+
+const rewards = document.querySelector('.rewards');
+const rewards2 = document.querySelector('.rewards2');
+const rewards3 = document.querySelector('.rewards3');
+
+/**
+ * For the leadForm DOM
+ */
+
 const leadForm = document.querySelector('#leadForm');
 const leadForm2 = document.querySelector('#leadForm2');
 const leadForm3 = document.querySelector('#leadForm3');
@@ -42,7 +89,10 @@ const redirect = document.querySelector('#a');
 const redirect2 = document.querySelector('#a2');
 const redirect3 = document.querySelector('#a3');
 
-// FUNCTIONS
+/**
+ * Start of functions for the elements
+ */
+
 claim.addEventListener('click', function(){
 	header.style.animation = 'fadeOut 1s';
 	casinoHome.style.animation = 'cog3 1s';
@@ -64,6 +114,7 @@ function showHidden(){
 subOffer1.addEventListener('click', clickOffer1);
 
 function clickOffer1(){
+	rewards.style.display = 'none';
 	dollarIMG.style.display = 'none';
 	let w = window.innerWidth;
 	if(w <= 767){
@@ -78,6 +129,7 @@ function clickOffer1(){
 	cardClaim.style.display = 'block';
 	revealBtn1.addEventListener('click', function (){
 		cardClaim2.style.display = 'block';
+		rewards2.style.display = 'none';
 		dollarIMG2.style.display = 'none';
 		subOffer2.style.animation = 'cog2 1s';
 		let w = window.innerWidth;
@@ -93,6 +145,7 @@ function clickOffer1(){
 	});
 	revealBtn2.addEventListener('click', function (){
 		cardClaim3.style.display = 'block';
+		rewards3.style.display = 'none';
 		dollarIMG3.style.display = 'none';
 		subOffer3.style.animation = 'cog2 1s';
 		if(w <= 767){
@@ -150,6 +203,7 @@ function clickOffer1(){
 subOffer2.addEventListener('click', clickOffer2);
 
 function clickOffer2(){
+	rewards2.style.display = 'none';
 	dollarIMG2.style.display = 'none';
 	let w = window.innerWidth;
 	if(w <= 767){
@@ -164,6 +218,7 @@ function clickOffer2(){
 	cardClaim2.style.display = 'block';
 	revealBtn2.addEventListener('click', function (){
 		cardClaim3.style.display = 'block';
+		rewards3.style.display = 'none';
 		dollarIMG3.style.display = 'none';
 		subOffer3.style.animation = 'cog2 1s';
 		let w = window.innerWidth;
@@ -179,6 +234,7 @@ function clickOffer2(){
 	});
 	revealBtn3.addEventListener('click', function (){
 		cardClaim.style.display = 'block';
+		rewards.style.display = 'none';
 		dollarIMG.style.display = 'none';
 		subOffer1.style.transition = 'all 0.5s';
 		let w = window.innerWidth;
@@ -236,6 +292,7 @@ function clickOffer2(){
 subOffer3.addEventListener('click', clickOffer3);
 
 function clickOffer3(){
+	rewards3.style.display = 'none';
 	dollarIMG3.style.display = 'none';
 	let w = window.innerWidth;
 	if(w <= 767){
@@ -249,6 +306,7 @@ function clickOffer3(){
 	revealBtn3.style.display = 'block';
 	cardClaim3.style.display = 'block';
 	revealBtn3.addEventListener('click', function (){
+		rewards2.style.display = 'none';
 		dollarIMG2.style.display = 'none';
 		cardClaim2.style.display = 'block';
 		subOffer2.style.animation = 'cog2 1s';
@@ -264,6 +322,7 @@ function clickOffer3(){
 		revealBtn2.style.display = 'block';
 	});
 	revealBtn2.addEventListener('click', function (){
+		rewards.style.display = 'none';
 		dollarIMG.style.display = 'none';
 		cardClaim.style.display = 'block';
 		subOffer1.style.transition = 'all 0.5s';
